@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta Tags -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexchange Exchanger Demo</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./styles/styles.css">
+
+  <!-- Scripts -->
+  <script src="./dist/bundle.js"   defer></script>
+  <script src="./scripts/index.js" defer></script>
+</head>
+<body>
+  <section>
+    <header><h1><u>Arcane Exchanger</h1></u></header>
+    <div id="coin_choice">
+      <div>
+        <div class="currency_select">
+          <select name="base_currency" id="base_currency">
+            <option value="BTC">Bitcoin</option>
+            <option value="BCH">Bitcoin Cash</option>
+            <option value="ETH">Ethereum</option>
+            <option value="XMR">Monero</option>
+          </select>
+        </div>
+        <input type="text" class="currency_quantity" id="base_input">
+      </div>
+      <div>
+        <div class="currency_select">
+          <select name="quote_currency" id="quote_currency">
+            <option value="BTC">Bitcoin</option>
+            <option value="BCH">Bitcoin Cash</option>
+            <option value="ETH">Ethereum</option>
+            <option value="XMR">Monero</option>
+          </select>
+        </div>
+        <input type="text" class="currency_quantity" id="quote_input">
+      </div>
+    </div>
+    <div class="ExchangeArea">
+      <input type="text" id="base_address" placeholder="Address to receive funds.">
+      <button onclick="ExchangeCrypto()">Make Exchange</button>
+      <div id="displayArea"></div>
+    </div>
+  </section>
+</body>
+</html>
